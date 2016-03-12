@@ -13,13 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelAction: UILabel!
     
     @IBAction func displayNewQuote() {
-        print("Pressed \"Display New Quote\"")
+        labelAction.text = "Should display a new quote now"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         //Changes to developer A brunch
     }
 
