@@ -20,20 +20,22 @@ class ViewController: UIViewController {
     var quotes = [QuoteDetails]()
     var quoteIndex = 0
     
-    @IBOutlet weak var labelAction: UILabel!
+    @IBOutlet weak var labelAuthor: UILabel!
+    @IBOutlet weak var labelQuote: UILabel!
     
     @IBAction func displayNewQuote() {
         if quotes.count - 1 < quoteIndex{
             quoteIndex = 0
         }
-        labelAction.text = quotes[quoteIndex].quote
+        labelQuote.text = quotes[quoteIndex].quote
+        labelAuthor.text = quotes[quoteIndex].author
         quoteIndex++
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         quotes = [quote1, quote2, quote3]
-
+        displayNewQuote()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
