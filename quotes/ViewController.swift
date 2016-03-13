@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         }
         labelAction.text = quotes[quoteIndex]
         quoteIndex++
-    }
+    } 
     
     override func viewDidLoad() {
         super.viewDidLoad()
