@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         (labelQuote.text!, labelAuthor.text!) = quotes.getNewQuote()
     }
     
+    @IBAction func displayRandomQuote() {
+        (labelQuote.text!, labelAuthor.text!) = quotes.getRandomQuote()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         displayNewQuote()

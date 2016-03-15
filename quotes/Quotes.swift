@@ -33,4 +33,12 @@ class Quotes: NSObject {
         quoteIndex++
         return result
     }
+    
+    func getRandomQuote()->(String,String){
+        var indexResult = 0
+        let randomNumber = arc4random_uniform(3)
+        indexResult = Int(randomNumber)
+        quoteIndex = indexResult + 1
+        return (quotes[indexResult].quote, quotes[indexResult].author)
+    }
 }
